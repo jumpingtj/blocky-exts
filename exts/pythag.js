@@ -31,4 +31,4 @@ class Pythag {
     }
 }
 
-Scratch.extensions.register(new Fetch())
+Scratch.extensions.register(new Pythag())
