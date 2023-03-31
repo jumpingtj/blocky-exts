@@ -1,0 +1,46 @@
+<!DOCTYPE html>
+<html>
+
+<head>
+    <style>
+        html,
+        body,
+        iframe {
+            width: 100%;
+            height: 100%;
+        }
+        
+        body {
+            margin: 0;
+            overflow: hidden;
+        }
+    </style>
+</head>
+
+<body>
+
+    <button onclick="start('ext1')">ext1</button>
+    <!-- <iframe style="width:100%;height:100%;" src="https://sheeptester.github.io/scratch-gui/?extention="></iframe> -->
+    <script>
+        const params = new Proxy(new URLSearchParams(window.location.search), {
+            get: (searchParams, prop) => searchParams.get(prop),
+        });
+        var url;
+        if (params.local) {
+            url = "http://127.0.0.1:4000"
+        } else {
+            url = "http://jumpingtj.github.io/blocky-exts"
+        }
+
+        function start(ext) {
+            var container = document.body;
+            container.innerHTML = `<iframe src='https://sheeptester.github.io/scratch-gui/?extention=${url}/exts/${ext}.js'></iframe>`
+        }
+        if (params.ext) {
+            start(params.ext);
+        }
+    </script>
+
+</body>
+
+</html>
