@@ -30,3 +30,5 @@ class Pythag {
         return Math.sqrt(args.A ** 2 + args.B ** 2)
     }
 }
+
+Scratch.extensions.register(new Fetch())
