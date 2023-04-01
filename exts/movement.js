@@ -14,16 +14,16 @@ class Movement {
             "name": "Self-move",
             "blocks": [{
                 "opcode": "movbool",
-                "blockType": "boolean",
+                "blockType": Scratch.BlockType.BOOLEAN,
                 "text": "Auto-move on?",
                 "arguments": {}
             }, {
                 "opcode": "movset",
-                "blockType": "command",
+                "blockType": Scratch.BlockType.COMMAND,
                 "text": "Set Auto-move to [B]",
                 "arguments": {
                     "B": {
-                        "type": "boolean",
+                        "type": Scratch.ArgumentType.BOOLEAN,
                         "defaultValue": "true"
                     }
                 }
