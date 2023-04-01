@@ -1,4 +1,4 @@
-var supportsTouch = 'ontouchstart' in window || navigator.msMaxTouchPoints;
+// var supportsTouch = 'ontouchstart' in window || navigator.msMaxTouchPoints;
 
 const ArgumentType = require('../../extension-support/argument-type');
 const BlockType = require('../../extension-support/block-type');
@@ -31,11 +31,11 @@ class Movement {
         }
     }
     movbool() {
-        return this.automove
+        return this.automove;
     }
     movset(b) {
-        this.automove = b
+        this.automove = b;
     }
 }
 
-Scratch.extensions.register(new Movement())
+Scratch.extensions.register(new Movement());
